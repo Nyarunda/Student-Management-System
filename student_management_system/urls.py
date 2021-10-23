@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
-from student_management_app import views
+from student_management_app import views, HodViews
 from student_management_system import settings
 
 
@@ -27,4 +27,5 @@ urlpatterns = [
     path('get_user_details', views.getUserDetails),
     path('logout_user', views.logout_user),
     path('doLogin',views.doLogin),
+    path('admin_home',HodViews.admin_home),
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)+static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
