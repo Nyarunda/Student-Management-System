@@ -133,9 +133,7 @@
           <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
         </div>
       </li>
-      <!-- Notifications Dropdown Menu -->
-     {% include 'hod_templates/notifications_template.html' %}
-
+      
       <li class="nav-item">
         <a class="nav-link" data-widget="fullscreen" href="#" role="button">
           <i class="fas fa-expand-arrows-alt"></i>
@@ -152,9 +150,31 @@
 
   <!-- Main Sidebar Container -->
   {% include 'hod_templates/mainsidebar_template.html' %}
-
+  
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
+    <div class="">
+      <div class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1 class="m-0 text-black">
+                {% block title_page %}
+                
+                {% endblock title_page %}
+              </h1>
+            </div>
+              <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li class="breadcrumb-item active">Dashboard</li>
+                </ol>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Content Header (Page header) -->
     {% include 'hod_templates/content_header.html' %}
     <!-- /.content-header -->
